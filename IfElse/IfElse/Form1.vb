@@ -10,7 +10,16 @@ Public Class Form1
 
         Dim st1 As String = txtFirstNum.Text
         Dim st2 As String = txtSecondNum.Text
-
+        'Checkpoint 1
+        If Not (IsNumeric(st1) And IsNumeric(st2)) Then
+            MessageBox.Show("Please type only numbers in the fields!!")
+            Return
+        End If
+        'Checkpoint 2
+        If Not ((num1 >= 0) And (num2 >= 0)) Then
+            MessageBox.Show("Only type positive numbers!!")
+        End If
+        'main program
         num1 = CDbl(st1)
         num2 = CDbl(st2)
 
@@ -25,6 +34,7 @@ Public Class Form1
         End If
 
         txtResult.Text = result
+
     End Sub
 
 End Class
